@@ -18,7 +18,8 @@ app.use(clerkMiddleware());
 app.use(cors({
   origin: [
     "http://localhost:5173", // Frontend development URL
-    "https://horizen-ai-driven-hotel-booking-system.vercel.app" // Frontend production URL
+    "https://horizen-ai-driven-hotel-booking-system-fe.vercel.app", // Deployed frontend URL
+    "https://horizen-ai-driven-hotel-booking-system-fe-nirantharas-projects.vercel.app" // Alternate deployed frontend URL
   ],
   methods: ["GET", "POST", "PUT", "DELETE"],
   credentials: true,
