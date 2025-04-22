@@ -15,15 +15,14 @@ const app = express();
 
 app.use(clerkMiddleware());
 // Middleware to parse JSON data in the request body
-app.use(cors({ origin: process.env.FRONTEND_URL }));
-
-app.use(cors(
-  {
-    origin: ["http://localhost:3000", "https://your-frontend-url.com"],
-    methods: ["GET", "POST", "PUT", "DELETE"],
-    credentials: true,
-  }
-));
+app.use(cors({
+  origin: [
+    "http://localhost:5173", // Frontend development URL
+    "https://horizen-ai-driven-hotel-booking-system.vercel.app" // Frontend production URL
+  ],
+  methods: ["GET", "POST", "PUT", "DELETE"],
+  credentials: true,
+}));
 
 app.post(
   "/api/stripe/webhook",
