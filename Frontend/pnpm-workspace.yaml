@@ -1,8 +1,0 @@
-packages:
-  - apps/**
-  - packages/**
-  - '!**/test/**'
-ignoredBuiltDependencies:
-  - '@clerk/shared'
-  - '@swc/core'
-  - esbuild
